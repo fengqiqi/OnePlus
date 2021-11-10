@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/11/9
 # @Author  : Fitch
-# @File    : smzdm_web_sign.py
+# @File    : oneplus_web_bbs.py
 # @Software: PyCharm
 
 '''

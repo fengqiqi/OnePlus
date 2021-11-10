@@ -1,5 +1,14 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# @Time    : 2021/11/9
+# @Author  : Fitch
+# @File    : smzdm_web_sign.py
+# @Software: PyCharm
+
+'''
+cron:  0 5 * * * oneplus_web_bbs.py
+new Env('一加论坛web签到抽奖');
+'''
 import json
 import re
 import time

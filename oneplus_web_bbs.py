@@ -105,6 +105,9 @@ class OnePlusBBSCheckIn:
             oneplusbbs_cookie = oneplusbbs_cookie.get("cookie")
             bbs_uname = re.findall(r"bbs_uname=(.*?);", oneplusbbs_cookie)
             bbs_uname = bbs_uname[0].split("%7C")[0] if bbs_uname else "未获取到用户信息"
+            if "未获取到用户信息" != bbs_uname:
+                bbs_uname =bbs_uname.encode('latin-1').decode("UTF-8")
+
             sign_msg = self.sign(cookie=oneplusbbs_cookie)
             draw_msg = self.draw(cookie=oneplusbbs_cookie)
             msg = f"【一加手机社区官方论坛】\n帐号信息: {bbs_uname}\n签到信息: {sign_msg}\n{draw_msg}"
@@ -115,6 +118,7 @@ class OnePlusBBSCheckIn:
 
 if __name__ == "__main__":
     with open("oneplus_cookie.json", "r", encoding='UTF-8') as f:
-        datas = json.loads(f.read())
+        datas = f.read()
+        datas = json.loads(datas.encode('UTF-8').decode('latin-1'))
     _oneplusbbs_cookie_list = datas.get("cookies", [])
     OnePlusBBSCheckIn(oneplusbbs_cookie_list=_oneplusbbs_cookie_list).main()

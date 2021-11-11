@@ -1,5 +1,3 @@
-自动脚本
-
 ## 一家论坛自动签到抽奖脚本 （"oneplus_" 开头的脚本）
 ## 1、一加论坛web端cookie获取方法
 + 首先使用chrome浏览器，访问[一加论坛官网](https://www.oneplusbbs.com/)， 登陆账号
